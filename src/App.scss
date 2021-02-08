@@ -28,14 +28,52 @@ $standard-border-radius: 8px;
   height: 100%;
   border: 1px solid rgb(255, 255, 255);
   border-radius: $standard-border-radius;
+  padding: $standard-padding;
 }
 
 .header {
   grid-area: header;
+
+  h1 {
+    width: fit-content;
+    margin: 0;
+    padding-left: $standard-padding / 4;
+    font-size: 6em;
+    background-image: gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, violet),
+      color-stop(0.15, indigo),
+      color-stop(0.3, blue),
+      color-stop(0.45, green),
+      color-stop(0.65, yellow),
+      color-stop(0.8, orange),
+      color-stop(0.1, red)
+    );
+    color: transparent;
+    background-clip: text;
+
+    /* for webkit browsers Chrome and Safari */
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, violet),
+      color-stop(0.15, indigo),
+      color-stop(0.3, blue),
+      color-stop(0.45, green),
+      color-stop(0.65, yellow),
+      color-stop(0.8, orange),
+      color-stop(0.1, red)
+    );
+    -webkit-background-clip: text;
+  }
 }
 
 .spectrum {
   grid-area: spectrum;
+  height: 100%;
 }
 
 .side-1 {
